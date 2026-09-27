@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+seminar03_ring_runs/
+seminar03_vla_runs/
