@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-18",
+  "cosmos": {
+    "observation": "Official sample_libero_10_observation.pkl, converted losslessly to NPZ",
+    "observed_future": false,
+    "instruction": "put both the alphabet soup and the tomato sauce in the basket",
+    "normalization": "Official checkpoint min/max",
+    "files": {
+      "cosmos_instruction.txt": {
+        "bytes": 61,
+        "sha256": "8405398832a6d730162b72e7768751f45e16ade5b47cfd3bb37f37632087c1e0"
+      },
+      "cosmos_text.safetensors": {
+        "bytes": 4194456,
+        "sha256": "57403a2bb2cad807163b9cd1a93c1ace3ed8c91527cd6d3c64f022b2b9522cd5"
+      },
+      "cosmos_text.json": {
+        "bytes": 118,
+        "sha256": "948e477c0fc699e107dbbaed71f77efce9b62f7d29e60fd68a92cd3bb88d2c3f"
+      },
+      "cosmos_statistics.json": {
+        "bytes": 2372,
+        "sha256": "5b119a98ad7824507ddff3c6c7507ca244261ee416dcfa623876702160c580d3"
+      },
+      "cosmos_observation.npz": {
+        "bytes": 182624,
+        "sha256": "edf60907d2d0c8549fc1bae8f465ecbc9781bcb6b8b0852583f99aef150e504e"
+      }
+    }
+  },
+  "uva": {
+    "environment": "Pinned UVA CPU PushTImageEnv",
+    "seed": 100000,
+    "legacy": true,
+    "fix_goal": true,
+    "render_size": 96,
+    "history": "Initial observation repeated 16 times; selected 3,7,11,15",
+    "actions": "16 absolute 2D pusher targets; checkpoint normalization",
+    "benchmark": false,
+    "predicted_future_frames_after_actions": [
+      4,
+      8,
+      12,
+      16
+    ],
+    "executed_action_sequences": 0,
+    "inference_paths": [
+      "policy_model",
+      "full_dynamic_model"
+    ],
+    "refinement_iterations": 1
+  }
+}

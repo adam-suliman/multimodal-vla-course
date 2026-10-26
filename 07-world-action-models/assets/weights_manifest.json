@@ -1,0 +1,19 @@
+{
+  "Cosmos-Policy-LIBERO-Predict2-2B.pt": {
+    "repo": "nvidia/Cosmos-Policy-LIBERO-Predict2-2B",
+    "revision": "cb689ec0e3347c13667d70a78a3447388f5c3bb8",
+    "bytes": 3913017345,
+    "sha256": "8818528d8c9150cda0ddf8c711b0f221b21dac8ac379bd26d5690235954d33e2"
+  },
+  "Wan2.1_VAE.pth": {
+    "repo": "Wan-AI/Wan2.1-T2V-1.3B",
+    "revision": "37ec512624d61f7aa208f7ea8140a131f93afc9a",
+    "bytes": 507609880,
+    "sha256": "38071ab59bd94681c686fa51d75a1968f64e470262043be31f7a094e442fd981"
+  },
+  "uva_pusht.ckpt": {
+    "gdrive_id": "1OduHcxfc2hqUYSccMQNf9g-vAt-q2UhF",
+    "bytes": 1310420836,
+    "sha256": "114dd771f946311fc72208439937009ad8a8f027a1e843ec42625d1cfe38bcbc"
+  }
+}
