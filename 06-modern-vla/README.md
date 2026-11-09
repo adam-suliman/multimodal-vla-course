@@ -56,6 +56,14 @@ assumed to be the standard π₀.₅ initialization.
 The complete notebook with reference TODO solutions is validated on a local
 CUDA GPU. A hosted Colab T4 session has not been tested.
 
+## Optional SO-101 simulation laboratory
+
+The [SO-101 pick-and-place module](../so101-pick-place/README.md) provides a separate
+Docker workflow for Isaac Sim, an IK expert, LeRobot export, and task-specific
+SmolVLA evaluation. It requires a local Linux RTX GPU host. See its validation
+status before using it for a project. The recorded RTX 3060 baseline with the original yellow robot is 20/20
+for the expert and 0/20 for SmolVLA; installation limitations are documented.
+
 ## Sources
 
 - [SmolVLA paper](https://arxiv.org/abs/2506.01844).

@@ -1,0 +1,17 @@
+{
+  "python": "3.11.13 (tags/v3.11.13-dirty:498b971, Jun  9 2025, 16:37:36) [GCC 7.3.1 20180303 (Red Hat 7.3.1-5)]",
+  "packages": {
+    "isaacsim": "5.1.0.0",
+    "numpy": "1.26.0",
+    "scipy": "1.15.3",
+    "torch": "2.7.0+cu126"
+  },
+  "gpu": "name, driver_version, memory.total [MiB], memory.free [MiB]\nNVIDIA GeForce RTX 3060, 535.230.02, 12288 MiB, 8695 MiB\n",
+  "errors": [],
+  "warnings": [
+    "Driver 535.230.02 predates the image reference 570.169. The separate wheel runtime must pass check-scene on this driver."
+  ],
+  "minimum_image_driver": "570.169",
+  "asset_lock": "sources.lock.json",
+  "next_check": "Run check-scene to verify rendering, URDF conversion and deterministic resets."
+}

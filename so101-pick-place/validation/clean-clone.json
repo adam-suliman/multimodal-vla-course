@@ -1,0 +1,28 @@
+{
+  "source": "local Git snapshot of the unpublished module",
+  "revision": "4bd0dff41afcddb201ffc6a482ce07b7b02552e7",
+  "initial_project_data_empty": true,
+  "local_wheel_environments_present": false,
+  "docker_image_store_empty": false,
+  "public_base_image_digest": "nvcr.io/nvidia/isaac-sim:5.1.0@sha256:93b0f99635ab126fb5b33298d513c11520f119f0ee60ff8414ccef67ea977829",
+  "checks_completed": true,
+  "checks": [
+    "build",
+    "doctor",
+    "fetch",
+    "convert",
+    "check-kinematics",
+    "check-scene",
+    "32 tests",
+    "policy-smoke on cuda:0",
+    "physical expert pilot seed 10003: success"
+  ],
+  "all_commands_exit_code": 0,
+  "driver": "535.230.02",
+  "host_driver_modified": false,
+  "image_id": "sha256:12966d8fe4e6a97e23c26bb4409cb9df36c1fa7c61c092bf553e48983ad15116",
+  "limitations": [
+    "The module snapshot is local and unpublished.",
+    "The shared Docker daemon was not emptied; base and build layers were cached."
+  ]
+}

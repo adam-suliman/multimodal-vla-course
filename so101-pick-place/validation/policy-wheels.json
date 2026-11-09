@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "host_driver": "535.230.02",
+  "host_driver_modified": false,
+  "gpu": "RTX 3060, GPU 0",
+  "runtime": "module-local Python 3.11.13, public Isaac Sim container, direct GPU device mounts",
+  "requirements_sha256": "4464ed39e232682e6da2b25faf25b9b9ad1f919d52fbc1101666d3a6b20f8e61",
+  "packages": {
+    "lerobot": "0.4.4",
+    "torch": "2.7.1+cu126",
+    "transformers": "4.57.1",
+    "numpy": "2.2.6"
+  },
+  "smoke": {
+    "finite_action": [
+      -0.04471885412931442,
+      -0.6254892945289612,
+      0.7902415990829468,
+      0.475775808095932,
+      -0.0017138405237346888,
+      0.7118198275566101
+    ],
+    "device": "cuda:0",
+    "task_success_test": false
+  },
+  "task_success_rate": null
+}

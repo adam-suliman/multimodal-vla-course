@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "device": "RTX 3060, GPU 0",
+  "actions": 51,
+  "crossed_chunk_boundary": true,
+  "reset_reproducible": true,
+  "finite": true,
+  "simulator_running": false,
+  "task_success_rate": null,
+  "adapter_contains_scene_coordinates": false,
+  "metadata": {
+    "device": "cuda:0",
+    "chunk_size": 50,
+    "action_steps": 50,
+    "control_hz": 10
+  },
+  "sampled_device_peak_mib": 1417.0
+}

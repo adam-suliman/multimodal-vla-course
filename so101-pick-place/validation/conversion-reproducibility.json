@@ -1,0 +1,28 @@
+{
+  "recipe_equal": true,
+  "file_sets_equal": true,
+  "all_derived_hashes_equal": false,
+  "file_count": 6,
+  "meshes": 34,
+  "collision_shapes": 17,
+  "recipe": {
+    "revision": "a758567c3978dfeefe282ede0500085a48fe8f78",
+    "isaac": "nvcr.io/nvidia/isaac-sim:5.1.0@sha256:93b0f99635ab126fb5b33298d513c11520f119f0ee60ff8414ccef67ea977829",
+    "simulator_lock_sha256": "3ff9621a6d4cdb95b62ea57e00291b014af9dda7bf0d5abd13cac0d426066748",
+    "recipe_version": 2,
+    "fixed_base": true,
+    "remove_empty_tcp_rigid_body": true,
+    "convex_decomposition": true,
+    "merge_fixed_joints": true,
+    "self_collision": false
+  },
+  "all_usd_layer_contents_equal": true,
+  "canonical_usd_sha256": {
+    "so101.usd": "e823749ea7863ab0feeb23500784d0581e07bcc178b62477591cf71d13220ab4",
+    "configuration/so101_physics.usd": "f40ce71657df4ece9ec4a0d7ca4e02d16e2db11c728608d2e9225c8bb910525e",
+    "configuration/so101_robot.usd": "dc3db5f688ce926a89b8316eb1816c189c19901080ea7b31da29294b38f0a3d6",
+    "configuration/so101_base.usd": "3d8618b0ca45a5ac1c1a484da82f8220d8431b508151972f0ac75e6faadfbbe4",
+    "configuration/so101_sensor.usd": "d208afeedd10666bb0756c80cc47ff691b8ebb1ef25e22076f19bc459e6f6f37"
+  },
+  "note": "Binary crate encoding differed for one layer; every exported USDA layer is identical. Raw file hashes still protect each local conversion cache."
+}

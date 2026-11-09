@@ -1,0 +1,7 @@
+# Public NVIDIA wheels, matching the separate Python 3.11 B1K installation.
+isaacsim[all,extscache]==5.1.0.0
+torch==2.7.0+cu126
+torchvision==0.22.0+cu126
+torchaudio==2.7.0+cu126
+numpy==1.26.0
+pillow==11.3.0

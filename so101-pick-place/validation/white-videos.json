@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-09",
+  "image_id": "sha256:680696b075cf6baeac008c96a4cd5639c97a24945d6675018578e347488f167d",
+  "purpose": "One demonstration episode per policy; not a 20-seed benchmark.",
+  "views": [
+    "top",
+    "wrist"
+  ],
+  "videos": [
+    {
+      "policy": "expert",
+      "file": "expert-pilot.mp4",
+      "seed": 10000,
+      "result": {
+        "success": true,
+        "lifted": true,
+        "max_lift_m": 0.058766722679138184,
+        "stable_time_s": 1.0749999999999986,
+        "bilateral_contact_seen": true,
+        "seed": 10000,
+        "sim_time_s": 18.5,
+        "initial_position": [
+          0.22066745162010193,
+          -0.0830523893237114,
+          0.7350000143051147
+        ],
+        "clipped_actions": 0
+      },
+      "video": {
+        "width": 512,
+        "height": 256,
+        "r_frame_rate": "10/1",
+        "duration": "18.500000",
+        "nb_read_frames": "185"
+      },
+      "sha256": "10bf27882ca2e191a2280fe7249344bbc0a1475c2a639c13a065e73f2381cf63",
+      "manifest": "white-expert-video.json",
+      "audit": "white-expert-video-audit.json",
+      "source_run": "runs/white-expert-video",
+      "decode_passed": true,
+      "command": "ACCEPT_EULA=Y SO101_GPU_MODE=direct GPU_INDEX=0 ./scripts/run.sh collect --policy expert --seed 10000 --episodes 1 --output runs/white-expert-video --video"
+    },
+    {
+      "policy": "smolvla",
+      "file": "smolvla-example.mp4",
+      "seed": 10000,
+      "result": {
+        "success": false,
+        "lifted": false,
+        "max_lift_m": 2.384185791015625e-07,
+        "stable_time_s": 0.0,
+        "bilateral_contact_seen": false,
+        "seed": 10000,
+        "sim_time_s": 30.0,
+        "initial_position": [
+          0.22066745162010193,
+          -0.0830523893237114,
+          0.7350000143051147
+        ],
+        "clipped_actions": 1
+      },
+      "video": {
+        "width": 512,
+        "height": 256,
+        "r_frame_rate": "10/1",
+        "duration": "30.000000",
+        "nb_read_frames": "300"
+      },
+      "sha256": "d4871d65fe02185be0ac0f02c1da8b1b3e6bc275c86bab83accd75ec03a26d75",
+      "manifest": "white-smolvla-video.json",
+      "audit": "white-smolvla-video-audit.json",
+      "source_run": "runs/white-smolvla-video",
+      "decode_passed": true,
+      "command": "ACCEPT_EULA=Y SO101_GPU_MODE=direct GPU_INDEX=0 ./scripts/run.sh collect --policy smolvla --seed 10000 --episodes 1 --output runs/white-smolvla-video --video"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "built": true,
+  "image_id": "sha256:12966d8fe4e6a97e23c26bb4409cb9df36c1fa7c61c092bf553e48983ad15116",
+  "image_size_bytes": 38714062904,
+  "public_base": "nvcr.io/nvidia/isaac-sim:5.1.0@sha256:93b0f99635ab126fb5b33298d513c11520f119f0ee60ff8414ccef67ea977829",
+  "simulator_packages": 140,
+  "policy_packages": 118,
+  "both_dependency_checks_passed": true,
+  "isolated_environments": [
+    "/opt/sim",
+    "/opt/policy"
+  ],
+  "base_image_and_installer_layers_reused": true,
+  "clean_clone_build_used_docker_layer_cache": true,
+  "no_b1k_mounts_or_private_images": true,
+  "dockerfile_sha256": "726a5ed6d87423b396eca614a045c276d9f634749811199834b04588cfa9ad25",
+  "runtime_lock_sha256": {
+    "requirements-simulator.lock": "3ff9621a6d4cdb95b62ea57e00291b014af9dda7bf0d5abd13cac0d426066748",
+    "requirements-policy.lock": "4464ed39e232682e6da2b25faf25b9b9ad1f919d52fbc1101666d3a6b20f8e61"
+  },
+  "code_sha256": "3fcc3ba251960533d8f74528e1215b6fafedf4da7db933232c0dc214d6465007",
+  "config_sha256": "6e05a7e50cfc8df4db2f8374e719b819f723957c9ff9f067457cd7ad2fc210a1",
+  "matches_evaluated_code_and_configuration": true,
+  "initial_dependency_wheel_cache_empty": true,
+  "dependency_wheels_downloaded_from_public_sources": true
+}

@@ -1,0 +1,25 @@
+{
+  "installed": true,
+  "python": "3.11.13",
+  "simulator_package_count": 140,
+  "simulator_dependency_check": "passed",
+  "policy_package_count": 118,
+  "policy_dependency_check": "passed",
+  "host_driver": "535.230.02",
+  "host_driver_modified": false,
+  "isaac_image": "nvcr.io/nvidia/isaac-sim:5.1.0@sha256:93b0f99635ab126fb5b33298d513c11520f119f0ee60ff8414ccef67ea977829",
+  "simulator_requirements_sha256": "3ff9621a6d4cdb95b62ea57e00291b014af9dda7bf0d5abd13cac0d426066748",
+  "packages": {
+    "isaacsim": "5.1.0.0",
+    "isaacsim-core": "5.1.0.0",
+    "isaacsim-robot": "5.1.0.0",
+    "isaacsim-robot-motion": "5.1.0.0",
+    "torch": "2.7.0+cu126",
+    "numpy": "1.26.0",
+    "isaacsim-example": "5.1.0.0"
+  },
+  "runtime_external_b1k_mounts": false,
+  "all_runtime_dependencies_hash_verified": true,
+  "installation_flavor": "isaacsim[all,extscache]==5.1.0.0",
+  "setup_script_completed": true
+}

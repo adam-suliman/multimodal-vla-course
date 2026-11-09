@@ -1,0 +1,166 @@
+{
+  "physics_hz": 120,
+  "control_hz": 10,
+  "task": "Pick up the red block and place it on the blue target.",
+  "table": {
+    "center": [
+      0.2,
+      0.0,
+      0.36
+    ],
+    "size": [
+      0.8,
+      0.7,
+      0.72
+    ],
+    "color": [
+      0.55,
+      0.44,
+      0.32
+    ]
+  },
+  "cube": {
+    "size": 0.03,
+    "mass": 0.02,
+    "xy_min": [
+      0.2,
+      -0.1
+    ],
+    "xy_max": [
+      0.24,
+      -0.06
+    ],
+    "color": [
+      0.8,
+      0.04,
+      0.03
+    ]
+  },
+  "target": {
+    "center_xy": [
+      0.23,
+      0.1
+    ],
+    "size": [
+      0.1,
+      0.1
+    ],
+    "color": [
+      0.04,
+      0.15,
+      0.8
+    ]
+  },
+  "robot": {
+    "printed_color": [1.0, 1.0, 1.0],
+    "base_position": [
+      0.0,
+      0.0,
+      0.72
+    ],
+    "home_rad": [
+      0.0,
+      -0.7,
+      0.8,
+      0.5,
+      0.0,
+      0.8
+    ],
+    "tool_link": "gripper_frame_link",
+    "tool_offset": [
+      -0.017,
+      0,
+      -0.005
+    ],
+    "open_rad": 0.8,
+    "closed_rad": -0.02,
+    "max_speed_rad_s": 1.0,
+    "stiffness": [
+      40.0,
+      60.0,
+      50.0,
+      25.0,
+      15.0,
+      8.0
+    ],
+    "damping": [
+      3.0,
+      4.0,
+      3.0,
+      2.0,
+      1.0,
+      0.5
+    ],
+    "effort_limit": [
+      3.0,
+      3.0,
+      3.0,
+      2.0,
+      2.0,
+      0.5
+    ]
+  },
+  "contact": {
+    "static_friction": 1.2,
+    "dynamic_friction": 1.0,
+    "contact_offset": 0.001,
+    "rest_offset": 0.0
+  },
+  "cameras": {
+    "resolution": [
+      256,
+      256
+    ],
+    "top": {
+      "position": [
+        0.22,
+        0.0,
+        1.35
+      ],
+      "look_at": [
+        0.22,
+        0.0,
+        0.72
+      ]
+    },
+    "wrist": {
+      "parent_link": "gripper_link",
+      "position": [
+        0.0,
+        -0.055,
+        -0.015
+      ],
+      "look_at": [
+        -0.008,
+        0.0,
+        -0.105
+      ]
+    },
+    "focal_length_m": 0.018,
+    "horizontal_aperture_m": 0.020955
+  },
+  "expert": {
+    "clearance": 0.06,
+    "grasp_z_offset": 0.0,
+    "place_clearance": 0.005,
+    "ik_tolerance_m": 0.003
+  },
+  "adapter": {
+    "scale_per_radian": [
+      62.3826456,
+      55.2690672,
+      58.9686702,
+      56.29522,
+      31.8387617,
+      45.7472731
+    ],
+    "offset": [
+      -2.58373207,
+      0.38151761,
+      10.2668475,
+      4.66321242,
+      0.0244200245,
+      0.07017546
+    ]
+  }
+}

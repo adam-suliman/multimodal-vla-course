@@ -1,0 +1,800 @@
+{
+  "mode": "evaluate",
+  "policy": "smolvla",
+  "seeds": [
+    101,
+    211,
+    307,
+    401,
+    503,
+    601,
+    701,
+    809,
+    907,
+    1009,
+    1103,
+    1201,
+    1301,
+    1409,
+    1511,
+    1601,
+    1709,
+    1801,
+    1901,
+    2003
+  ],
+  "config": {
+    "physics_hz": 120,
+    "control_hz": 10,
+    "task": "Pick up the red block and place it on the blue target.",
+    "table": {
+      "center": [
+        0.2,
+        0.0,
+        0.36
+      ],
+      "size": [
+        0.8,
+        0.7,
+        0.72
+      ],
+      "color": [
+        0.55,
+        0.44,
+        0.32
+      ]
+    },
+    "cube": {
+      "size": 0.03,
+      "mass": 0.02,
+      "xy_min": [
+        0.2,
+        -0.1
+      ],
+      "xy_max": [
+        0.24,
+        -0.06
+      ],
+      "color": [
+        0.8,
+        0.04,
+        0.03
+      ]
+    },
+    "target": {
+      "center_xy": [
+        0.23,
+        0.1
+      ],
+      "size": [
+        0.1,
+        0.1
+      ],
+      "color": [
+        0.04,
+        0.15,
+        0.8
+      ]
+    },
+    "robot": {
+      "base_position": [
+        0.0,
+        0.0,
+        0.72
+      ],
+      "home_rad": [
+        0.0,
+        -0.7,
+        0.8,
+        0.5,
+        0.0,
+        0.8
+      ],
+      "tool_link": "gripper_frame_link",
+      "tool_offset": [
+        -0.017,
+        0,
+        -0.005
+      ],
+      "open_rad": 0.8,
+      "closed_rad": -0.02,
+      "max_speed_rad_s": 1.0,
+      "stiffness": [
+        40.0,
+        60.0,
+        50.0,
+        25.0,
+        15.0,
+        8.0
+      ],
+      "damping": [
+        3.0,
+        4.0,
+        3.0,
+        2.0,
+        1.0,
+        0.5
+      ],
+      "effort_limit": [
+        3.0,
+        3.0,
+        3.0,
+        2.0,
+        2.0,
+        0.5
+      ]
+    },
+    "contact": {
+      "static_friction": 1.2,
+      "dynamic_friction": 1.0,
+      "contact_offset": 0.001,
+      "rest_offset": 0.0
+    },
+    "cameras": {
+      "resolution": [
+        256,
+        256
+      ],
+      "top": {
+        "position": [
+          0.22,
+          0.0,
+          1.35
+        ],
+        "look_at": [
+          0.22,
+          0.0,
+          0.72
+        ]
+      },
+      "wrist": {
+        "parent_link": "gripper_link",
+        "position": [
+          0.0,
+          -0.055,
+          -0.015
+        ],
+        "look_at": [
+          -0.008,
+          0.0,
+          -0.105
+        ]
+      },
+      "focal_length_m": 0.018,
+      "horizontal_aperture_m": 0.020955
+    },
+    "expert": {
+      "clearance": 0.06,
+      "grasp_z_offset": 0.0,
+      "place_clearance": 0.005,
+      "ik_tolerance_m": 0.003
+    },
+    "adapter": {
+      "scale_per_radian": [
+        62.3826456,
+        55.2690672,
+        58.9686702,
+        56.29522,
+        31.8387617,
+        45.7472731
+      ],
+      "offset": [
+        -2.58373207,
+        0.38151761,
+        10.2668475,
+        4.66321242,
+        0.0244200245,
+        0.07017546
+      ]
+    }
+  },
+  "config_sha256": "6e05a7e50cfc8df4db2f8374e719b819f723957c9ff9f067457cd7ad2fc210a1",
+  "protocol": {
+    "version": 1,
+    "seeds": [
+      101,
+      211,
+      307,
+      401,
+      503,
+      601,
+      701,
+      809,
+      907,
+      1009,
+      1103,
+      1201,
+      1301,
+      1409,
+      1511,
+      1601,
+      1709,
+      1801,
+      1901,
+      2003
+    ],
+    "time_limit_s": 30.0,
+    "lift_m": 0.02,
+    "stable_s": 1.0,
+    "linear_speed_m_s": 0.01,
+    "angular_speed_rad_s": 0.1,
+    "support_tolerance_m": 0.003
+  },
+  "sources": {
+    "isaac_image": "nvcr.io/nvidia/isaac-sim:5.1.0@sha256:93b0f99635ab126fb5b33298d513c11520f119f0ee60ff8414ccef67ea977829",
+    "robot": {
+      "repository": "TheRobotStudio/SO-ARM100",
+      "revision": "a758567c3978dfeefe282ede0500085a48fe8f78",
+      "license": "Apache-2.0",
+      "files": [
+        {
+          "path": "Simulation/SO101/so101_new_calib.urdf",
+          "url": "https://raw.githubusercontent.com/TheRobotStudio/SO-ARM100/a758567c3978dfeefe282ede0500085a48fe8f78/Simulation/SO101/so101_new_calib.urdf",
+          "sha256": "3a65d2d35e68a8d2f0c2cc176d19b884506543c93ba72980145b80abe276022c",
+          "size": 16231
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/TheRobotStudio/SO-ARM100/a758567c3978dfeefe282ede0500085a48fe8f78/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "size": 11357
+        },
+        {
+          "path": "Simulation/SO101/README.md",
+          "url": "https://raw.githubusercontent.com/TheRobotStudio/SO-ARM100/a758567c3978dfeefe282ede0500085a48fe8f78/Simulation/SO101/README.md",
+          "sha256": "c6df213e471e4573ba6384cb957e9eee9644f5d671272f98f67d28866333f747",
+          "size": 2408
+        },
+        {
+          "path": "Simulation/SO101/assets/base_motor_holder_so101_v1.stl",
+          "url": "https://raw.githubusercontent.com/TheRobotStudio/SO-ARM100/a758567c3978dfeefe282ede0500085a48fe8f78/Simulation/SO101/assets/base_motor_holder_so101_v1.stl",
+          "sha256": "8cd2f241037ea377af1191fffe0dd9d9006beea6dcc48543660ed41647072424",
+          "size": 1877084
+        },
+        {
+          "path": "Simulation/SO101/assets/base_so101_v2.stl",
+          "url": "https://raw.githubusercontent.com/TheRobotStudio/SO-ARM100/a758567c3978dfeefe282ede0500085a48fe8f78/Simulation/SO101/assets/base_so101_v2.stl",
+          "sha256": "bb12b7026575e1f70ccc7240051f9d943553bf34e5128537de6cd86fae33924d",
+          "size": 471584
+        },
+        {
+          "path": "Simulation/SO101/assets/motor_holder_so101_base_v1.stl",
+          "url": "https://raw.githubusercontent.com/TheRobotStudio/SO-ARM100/a758567c3978dfeefe282ede0500085a48fe8f78/Simulation/SO101/assets/motor_holder_so101_base_v1.stl",
+          "sha256": "31242ae6fb59d8b15c66617b88ad8e9bded62d57c35d11c0c43a70d2f4caa95b",
+          "size": 1129384
+        },
+        {
+          "path": "Simulation/SO101/assets/motor_holder_so101_wrist_v1.stl",
+          "url": "https://raw.githubusercontent.com/TheRobotStudio/SO-ARM100/a758567c3978dfeefe282ede0500085a48fe8f78/Simulation/SO101/assets/motor_holder_so101_wrist_v1.stl",
+          "sha256": "887f92e6013cb64ea3a1ab8675e92da1e0beacfd5e001f972523540545e08011",
+          "size": 1052184
+        },
+        {
+          "path": "Simulation/SO101/assets/moving_jaw_so101_v1.stl",
+          "url": "https://raw.githubusercontent.com/TheRobotStudio/SO-ARM100/a758567c3978dfeefe282ede0500085a48fe8f78/Simulation/SO101/assets/moving_jaw_so101_v1.stl",
+          "sha256": "785a9dded2f474bc1d869e0d3dae398a3dcd9c0c345640040472210d2861fa9d",
+          "size": 1413584
+        },
+        {
+          "path": "Simulation/SO101/assets/rotation_pitch_so101_v1.stl",
+          "url": "https://raw.githubusercontent.com/TheRobotStudio/SO-ARM100/a758567c3978dfeefe282ede0500085a48fe8f78/Simulation/SO101/assets/rotation_pitch_so101_v1.stl",
+          "sha256": "9be900cc2a2bf718102841ef82ef8d2873842427648092c8ed2ca1e2ef4ffa34",
+          "size": 883684
+        },
+        {
+          "path": "Simulation/SO101/assets/sts3215_03a_no_horn_v1.stl",
+          "url": "https://raw.githubusercontent.com/TheRobotStudio/SO-ARM100/a758567c3978dfeefe282ede0500085a48fe8f78/Simulation/SO101/assets/sts3215_03a_no_horn_v1.stl",
+          "sha256": "75ef3781b752e4065891aea855e34dc161a38a549549cd0970cedd07eae6f887",
+          "size": 865884
+        },
+        {
+          "path": "Simulation/SO101/assets/sts3215_03a_v1.stl",
+          "url": "https://raw.githubusercontent.com/TheRobotStudio/SO-ARM100/a758567c3978dfeefe282ede0500085a48fe8f78/Simulation/SO101/assets/sts3215_03a_v1.stl",
+          "sha256": "a37c871fb502483ab96c256baf457d36f2e97afc9205313d9c5ab275ef941cd0",
+          "size": 954084
+        },
+        {
+          "path": "Simulation/SO101/assets/under_arm_so101_v1.stl",
+          "url": "https://raw.githubusercontent.com/TheRobotStudio/SO-ARM100/a758567c3978dfeefe282ede0500085a48fe8f78/Simulation/SO101/assets/under_arm_so101_v1.stl",
+          "sha256": "d01d1f2de365651dcad9d6669e94ff87ff7652b5bb2d10752a66a456a86dbc71",
+          "size": 1975884
+        },
+        {
+          "path": "Simulation/SO101/assets/upper_arm_so101_v1.stl",
+          "url": "https://raw.githubusercontent.com/TheRobotStudio/SO-ARM100/a758567c3978dfeefe282ede0500085a48fe8f78/Simulation/SO101/assets/upper_arm_so101_v1.stl",
+          "sha256": "475056e03a17e71919b82fd88ab9a0b898ab50164f2a7943652a6b2941bb2d4f",
+          "size": 1303484
+        },
+        {
+          "path": "Simulation/SO101/assets/waveshare_mounting_plate_so101_v2.stl",
+          "url": "https://raw.githubusercontent.com/TheRobotStudio/SO-ARM100/a758567c3978dfeefe282ede0500085a48fe8f78/Simulation/SO101/assets/waveshare_mounting_plate_so101_v2.stl",
+          "sha256": "e197e24005a07d01bbc06a8c42311664eaeda415bf859f68fa247884d0f1a6e9",
+          "size": 62784
+        },
+        {
+          "path": "Simulation/SO101/assets/wrist_roll_follower_so101_v1.stl",
+          "url": "https://raw.githubusercontent.com/TheRobotStudio/SO-ARM100/a758567c3978dfeefe282ede0500085a48fe8f78/Simulation/SO101/assets/wrist_roll_follower_so101_v1.stl",
+          "sha256": "4b17b410a12d64ec39554abc3e8054d8a97384b2dc4a8d95a5ecb2a93670f5f4",
+          "size": 1439884
+        },
+        {
+          "path": "Simulation/SO101/assets/wrist_roll_pitch_so101_v2.stl",
+          "url": "https://raw.githubusercontent.com/TheRobotStudio/SO-ARM100/a758567c3978dfeefe282ede0500085a48fe8f78/Simulation/SO101/assets/wrist_roll_pitch_so101_v2.stl",
+          "sha256": "6c7ec5525b4d8b9e397a30ab4bb0037156a5d5f38a4adf2c7d943d6c56eda5ae",
+          "size": 2699784
+        }
+      ]
+    },
+    "policy": {
+      "repository": "Cache-SCA/smolvla_IsaacLab-SO101_pick_place_baseCaP_100epi_50ep",
+      "revision": "6c048c0a0574d88566cc83170341e5fd4306dae5",
+      "license": "apache-2.0",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://huggingface.co/Cache-SCA/smolvla_IsaacLab-SO101_pick_place_baseCaP_100epi_50ep/resolve/6c048c0a0574d88566cc83170341e5fd4306dae5/README.md",
+          "sha256": "8c4165cfd333afa2a4b16a5a67cd6f6ea1d3604a0e6ef14dfa5f78f812acf491",
+          "size": 1731
+        },
+        {
+          "path": "config.json",
+          "url": "https://huggingface.co/Cache-SCA/smolvla_IsaacLab-SO101_pick_place_baseCaP_100epi_50ep/resolve/6c048c0a0574d88566cc83170341e5fd4306dae5/config.json",
+          "sha256": "3f577d275a51fffbdfa2f3ada288b73c6617734680ae956155dbdbf07e345503",
+          "size": 2523
+        },
+        {
+          "path": "model.safetensors",
+          "url": "https://huggingface.co/Cache-SCA/smolvla_IsaacLab-SO101_pick_place_baseCaP_100epi_50ep/resolve/6c048c0a0574d88566cc83170341e5fd4306dae5/model.safetensors",
+          "sha256": "6bc8aa9afda3541c8883cf2359f74c36e994a98d827f065ea02bac8a3a4b5d60",
+          "size": 906712520
+        },
+        {
+          "path": "policy_postprocessor.json",
+          "url": "https://huggingface.co/Cache-SCA/smolvla_IsaacLab-SO101_pick_place_baseCaP_100epi_50ep/resolve/6c048c0a0574d88566cc83170341e5fd4306dae5/policy_postprocessor.json",
+          "sha256": "2b78bb742065288df2ec63b0ee35f97a1f6950171cf2272f7e34b1fe3873b17b",
+          "size": 660
+        },
+        {
+          "path": "policy_postprocessor_step_0_unnormalizer_processor.safetensors",
+          "url": "https://huggingface.co/Cache-SCA/smolvla_IsaacLab-SO101_pick_place_baseCaP_100epi_50ep/resolve/6c048c0a0574d88566cc83170341e5fd4306dae5/policy_postprocessor_step_0_unnormalizer_processor.safetensors",
+          "sha256": "48c8720b776ac7d1f8eebdf34b13d5fc6aa7a116df7eebfddda2cf19da03eaca",
+          "size": 16796
+        },
+        {
+          "path": "policy_preprocessor.json",
+          "url": "https://huggingface.co/Cache-SCA/smolvla_IsaacLab-SO101_pick_place_baseCaP_100epi_50ep/resolve/6c048c0a0574d88566cc83170341e5fd4306dae5/policy_preprocessor.json",
+          "sha256": "a5e967660a3f7fe370769fc986021dbb9dd26aafae75e861396d7812e5bdf4c5",
+          "size": 2044
+        },
+        {
+          "path": "policy_preprocessor_step_5_normalizer_processor.safetensors",
+          "url": "https://huggingface.co/Cache-SCA/smolvla_IsaacLab-SO101_pick_place_baseCaP_100epi_50ep/resolve/6c048c0a0574d88566cc83170341e5fd4306dae5/policy_preprocessor_step_5_normalizer_processor.safetensors",
+          "sha256": "48c8720b776ac7d1f8eebdf34b13d5fc6aa7a116df7eebfddda2cf19da03eaca",
+          "size": 16796
+        }
+      ]
+    },
+    "vlm": {
+      "repository": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
+      "revision": "7b375e1b73b11138ff12fe22c8f2822d8fe03467",
+      "license": "apache-2.0",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/7b375e1b73b11138ff12fe22c8f2822d8fe03467/README.md",
+          "sha256": "afc4bf5f519438b221a84292979a9eac3de4b9726e5baaa82033c55f59f9f7a5",
+          "size": 10865
+        },
+        {
+          "path": "added_tokens.json",
+          "url": "https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/7b375e1b73b11138ff12fe22c8f2822d8fe03467/added_tokens.json",
+          "sha256": "74135b8664b56088c0006f1c8e848d79a8eba003411f72ebf1dc2ee96227be3a",
+          "size": 4739
+        },
+        {
+          "path": "chat_template.json",
+          "url": "https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/7b375e1b73b11138ff12fe22c8f2822d8fe03467/chat_template.json",
+          "sha256": "b585e3598909a5687f9f9d738d35223724dedef256b9b274e1cbfb32b13c74bf",
+          "size": 430
+        },
+        {
+          "path": "config.json",
+          "url": "https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/7b375e1b73b11138ff12fe22c8f2822d8fe03467/config.json",
+          "sha256": "ea6bc1237e96247f6258de3e202e2e62b93d6f386dc47e7b36b5588bf3a15e17",
+          "size": 3767
+        },
+        {
+          "path": "generation_config.json",
+          "url": "https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/7b375e1b73b11138ff12fe22c8f2822d8fe03467/generation_config.json",
+          "sha256": "34835060c9f0f74d1acb456cc72ca32746d3843d9eb5f578f9cbffac1d2eb840",
+          "size": 136
+        },
+        {
+          "path": "merges.txt",
+          "url": "https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/7b375e1b73b11138ff12fe22c8f2822d8fe03467/merges.txt",
+          "sha256": "0b54e8aa4e53d5383e2e4bc635a56b43f9647f7b13832d5d9ecd8f82dac4f510",
+          "size": 466391
+        },
+        {
+          "path": "preprocessor_config.json",
+          "url": "https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/7b375e1b73b11138ff12fe22c8f2822d8fe03467/preprocessor_config.json",
+          "sha256": "149e315d9410368e5491455bb06e0f763426e9e56cca731c13b24404a29b6374",
+          "size": 599
+        },
+        {
+          "path": "processor_config.json",
+          "url": "https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/7b375e1b73b11138ff12fe22c8f2822d8fe03467/processor_config.json",
+          "sha256": "f3ad45028447b3562b4752be0d5916d6806c1ef589091a469608dcf0faa1737c",
+          "size": 67
+        },
+        {
+          "path": "special_tokens_map.json",
+          "url": "https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/7b375e1b73b11138ff12fe22c8f2822d8fe03467/special_tokens_map.json",
+          "sha256": "2dfea2a426162316ff1567c82bc6d36d9690cd9f90455f075c77daca78b45c60",
+          "size": 868
+        },
+        {
+          "path": "tokenizer.json",
+          "url": "https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/7b375e1b73b11138ff12fe22c8f2822d8fe03467/tokenizer.json",
+          "sha256": "5ece781dc8d2b2f3e2f289ca0ae50b17cfc27dd27bfe7971bb8241e0b964331a",
+          "size": 3548256
+        },
+        {
+          "path": "tokenizer_config.json",
+          "url": "https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/7b375e1b73b11138ff12fe22c8f2822d8fe03467/tokenizer_config.json",
+          "sha256": "dd9ce2ab89a3dd881bd9378f1a79b943a064b9275a7e1706d5b7b47b68977913",
+          "size": 28626
+        },
+        {
+          "path": "vocab.json",
+          "url": "https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct/resolve/7b375e1b73b11138ff12fe22c8f2822d8fe03467/vocab.json",
+          "sha256": "82b84012e3add4d01d12ba14442026e49b8cbbaead1f79ecf3d919784f82dc79",
+          "size": 800662
+        }
+      ]
+    },
+    "training_data": {
+      "repository": "CoRL2026-CSI/IsaacLab-SO101_pick_place_baseCaP_100epi_10fps",
+      "revision": "07a40b15d4afcfcbc4e54ff6d27774230acb33a2",
+      "license": "Apache-2.0",
+      "sample_sha256": "bd76191ac1a4351ae3e03948aa570d1461d4dd6c1262889c989bc2db9f275a9a"
+    },
+    "base_requirements": {
+      "minimum_linux_driver": "570.169",
+      "ubuntu": "24.04",
+      "build_snapshot": "20251010T000000Z",
+      "build_essential": "12.10ubuntu1"
+    }
+  },
+  "started_utc": "2026-11-08T21:54:30Z",
+  "complete": true,
+  "code_sha256": "3fcc3ba251960533d8f74528e1215b6fafedf4da7db933232c0dc214d6465007",
+  "runtime_locks": {
+    "requirements-simulator.lock": "3ff9621a6d4cdb95b62ea57e00291b014af9dda7bf0d5abd13cac0d426066748",
+    "requirements-policy.lock": "4464ed39e232682e6da2b25faf25b9b9ad1f919d52fbc1101666d3a6b20f8e61"
+  },
+  "simulator_packages": {
+    "isaacsim": "5.1.0.0",
+    "torch": "2.7.0+cu126",
+    "numpy": "1.26.0"
+  },
+  "policy_runtime": {
+    "device": "cuda:0",
+    "chunk_size": 50,
+    "action_steps": 50,
+    "control_hz": 10
+  },
+  "gpu_memory": {
+    "sampled_peak_mib": 3348.0,
+    "total_mib": 12288.0,
+    "sample_interval_s": 0.5,
+    "includes_other_processes": true
+  },
+  "fatal_error": null,
+  "episodes": [
+    {
+      "success": false,
+      "lifted": false,
+      "max_lift_m": 1.7881393432617188e-07,
+      "stable_time_s": 0.0,
+      "bilateral_contact_seen": false,
+      "seed": 101,
+      "sim_time_s": 30.0,
+      "initial_position": [
+        0.23774108290672302,
+        -0.08562353998422623,
+        0.73499995470047
+      ],
+      "clipped_actions": 0
+    },
+    {
+      "success": false,
+      "lifted": false,
+      "max_lift_m": 2.384185791015625e-07,
+      "stable_time_s": 0.0,
+      "bilateral_contact_seen": false,
+      "seed": 211,
+      "sim_time_s": 30.0,
+      "initial_position": [
+        0.21786820888519287,
+        -0.08489557355642319,
+        0.7350000143051147
+      ],
+      "clipped_actions": 1
+    },
+    {
+      "success": false,
+      "lifted": false,
+      "max_lift_m": 2.384185791015625e-07,
+      "stable_time_s": 0.0,
+      "bilateral_contact_seen": false,
+      "seed": 307,
+      "sim_time_s": 30.0,
+      "initial_position": [
+        0.22531658411026,
+        -0.07305342704057693,
+        0.7350000143051147
+      ],
+      "clipped_actions": 1
+    },
+    {
+      "success": false,
+      "lifted": false,
+      "max_lift_m": 2.384185791015625e-07,
+      "stable_time_s": 0.0,
+      "bilateral_contact_seen": false,
+      "seed": 401,
+      "sim_time_s": 30.0,
+      "initial_position": [
+        0.22773507237434387,
+        -0.0846152976155281,
+        0.7350000143051147
+      ],
+      "clipped_actions": 1
+    },
+    {
+      "success": false,
+      "lifted": false,
+      "max_lift_m": 2.384185791015625e-07,
+      "stable_time_s": 0.0,
+      "bilateral_contact_seen": false,
+      "seed": 503,
+      "sim_time_s": 30.0,
+      "initial_position": [
+        0.21646416187286377,
+        -0.09009575098752975,
+        0.7350000143051147
+      ],
+      "clipped_actions": 1
+    },
+    {
+      "success": false,
+      "lifted": false,
+      "max_lift_m": 2.384185791015625e-07,
+      "stable_time_s": 0.0,
+      "bilateral_contact_seen": false,
+      "seed": 601,
+      "sim_time_s": 30.0,
+      "initial_position": [
+        0.23301830887794495,
+        -0.09988963603973389,
+        0.7349998354911804
+      ],
+      "clipped_actions": 1
+    },
+    {
+      "success": false,
+      "lifted": false,
+      "max_lift_m": 2.384185791015625e-07,
+      "stable_time_s": 0.0,
+      "bilateral_contact_seen": false,
+      "seed": 701,
+      "sim_time_s": 30.0,
+      "initial_position": [
+        0.23691236972808838,
+        -0.06184055656194687,
+        0.7349998354911804
+      ],
+      "clipped_actions": 0
+    },
+    {
+      "success": false,
+      "lifted": false,
+      "max_lift_m": 2.384185791015625e-07,
+      "stable_time_s": 0.0,
+      "bilateral_contact_seen": false,
+      "seed": 809,
+      "sim_time_s": 30.0,
+      "initial_position": [
+        0.22808697819709778,
+        -0.06787387281656265,
+        0.7350000143051147
+      ],
+      "clipped_actions": 0
+    },
+    {
+      "success": false,
+      "lifted": false,
+      "max_lift_m": 2.384185791015625e-07,
+      "stable_time_s": 0.0,
+      "bilateral_contact_seen": false,
+      "seed": 907,
+      "sim_time_s": 30.0,
+      "initial_position": [
+        0.22674494981765747,
+        -0.0980578288435936,
+        0.7350000143051147
+      ],
+      "clipped_actions": 1
+    },
+    {
+      "success": false,
+      "lifted": false,
+      "max_lift_m": 2.384185791015625e-07,
+      "stable_time_s": 0.0,
+      "bilateral_contact_seen": false,
+      "seed": 1009,
+      "sim_time_s": 30.0,
+      "initial_position": [
+        0.2022598385810852,
+        -0.0869237557053566,
+        0.7349998354911804
+      ],
+      "clipped_actions": 0
+    },
+    {
+      "success": false,
+      "lifted": false,
+      "max_lift_m": 2.384185791015625e-07,
+      "stable_time_s": 0.0,
+      "bilateral_contact_seen": false,
+      "seed": 1103,
+      "sim_time_s": 30.0,
+      "initial_position": [
+        0.20914240181446075,
+        -0.07022810727357864,
+        0.7350000143051147
+      ],
+      "clipped_actions": 0
+    },
+    {
+      "success": false,
+      "lifted": false,
+      "max_lift_m": 2.384185791015625e-07,
+      "stable_time_s": 0.0,
+      "bilateral_contact_seen": false,
+      "seed": 1201,
+      "sim_time_s": 30.0,
+      "initial_position": [
+        0.21779493987560272,
+        -0.09207714349031448,
+        0.7350000143051147
+      ],
+      "clipped_actions": 0
+    },
+    {
+      "success": false,
+      "lifted": false,
+      "max_lift_m": 2.384185791015625e-07,
+      "stable_time_s": 0.0,
+      "bilateral_contact_seen": false,
+      "seed": 1301,
+      "sim_time_s": 30.0,
+      "initial_position": [
+        0.2012043446302414,
+        -0.06585479527711868,
+        0.7350000143051147
+      ],
+      "clipped_actions": 1
+    },
+    {
+      "success": false,
+      "lifted": false,
+      "max_lift_m": 2.384185791015625e-07,
+      "stable_time_s": 0.0,
+      "bilateral_contact_seen": false,
+      "seed": 1409,
+      "sim_time_s": 30.0,
+      "initial_position": [
+        0.22252915799617767,
+        -0.06759669631719589,
+        0.7350000143051147
+      ],
+      "clipped_actions": 1
+    },
+    {
+      "success": false,
+      "lifted": false,
+      "max_lift_m": 2.384185791015625e-07,
+      "stable_time_s": 0.0,
+      "bilateral_contact_seen": false,
+      "seed": 1511,
+      "sim_time_s": 30.0,
+      "initial_position": [
+        0.2075606882572174,
+        -0.09640472382307053,
+        0.7349998354911804
+      ],
+      "clipped_actions": 1
+    },
+    {
+      "success": false,
+      "lifted": false,
+      "max_lift_m": 2.384185791015625e-07,
+      "stable_time_s": 0.0,
+      "bilateral_contact_seen": false,
+      "seed": 1601,
+      "sim_time_s": 30.0,
+      "initial_position": [
+        0.20905756950378418,
+        -0.07068843394517899,
+        0.7350000143051147
+      ],
+      "clipped_actions": 0
+    },
+    {
+      "success": false,
+      "lifted": false,
+      "max_lift_m": 2.384185791015625e-07,
+      "stable_time_s": 0.0,
+      "bilateral_contact_seen": false,
+      "seed": 1709,
+      "sim_time_s": 30.0,
+      "initial_position": [
+        0.20294414460659027,
+        -0.09819135814905167,
+        0.7349998354911804
+      ],
+      "clipped_actions": 0
+    },
+    {
+      "success": false,
+      "lifted": false,
+      "max_lift_m": 2.384185791015625e-07,
+      "stable_time_s": 0.0,
+      "bilateral_contact_seen": false,
+      "seed": 1801,
+      "sim_time_s": 30.0,
+      "initial_position": [
+        0.22569690644741058,
+        -0.09748368710279465,
+        0.7350000143051147
+      ],
+      "clipped_actions": 1
+    },
+    {
+      "success": false,
+      "lifted": false,
+      "max_lift_m": 2.384185791015625e-07,
+      "stable_time_s": 0.0,
+      "bilateral_contact_seen": false,
+      "seed": 1901,
+      "sim_time_s": 30.0,
+      "initial_position": [
+        0.22855781018733978,
+        -0.07990749925374985,
+        0.7350000143051147
+      ],
+      "clipped_actions": 0
+    },
+    {
+      "success": false,
+      "lifted": false,
+      "max_lift_m": 2.384185791015625e-07,
+      "stable_time_s": 0.0,
+      "bilateral_contact_seen": false,
+      "seed": 2003,
+      "sim_time_s": 30.0,
+      "initial_position": [
+        0.21178503334522247,
+        -0.06475400179624557,
+        0.7350000143051147
+      ],
+      "clipped_actions": 1
+    }
+  ],
+  "successes": 0,
+  "denominator": 20,
+  "success_rate": 0.0,
+  "expert_acceptance": false
+}

@@ -1,0 +1,11 @@
+lerobot[smolvla]==0.4.4
+transformers==4.57.1
+torch==2.7.1+cu126
+torchvision==0.22.1+cu126
+torchcodec==0.4.0
+numpy==2.2.6
+scipy==1.15.3
+opencv-python-headless==4.11.0.86
+av==15.1.0
+pillow==11.3.0
+pytest==8.4.2

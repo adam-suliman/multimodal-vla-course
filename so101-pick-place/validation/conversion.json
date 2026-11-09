@@ -1,0 +1,25 @@
+{
+  "recipe_version": 2,
+  "default_prim": "/so101_new_calib",
+  "rigid_bodies": [
+    "base_link",
+    "shoulder_link",
+    "upper_arm_link",
+    "lower_arm_link",
+    "wrist_link",
+    "gripper_link",
+    "moving_jaw_so101_v1_link"
+  ],
+  "revolute_joints": [
+    "shoulder_pan",
+    "shoulder_lift",
+    "elbow_flex",
+    "wrist_flex",
+    "wrist_roll",
+    "gripper"
+  ],
+  "meshes": 34,
+  "collision_shapes": 17,
+  "physics_tested": false,
+  "rendering_tested": false
+}
